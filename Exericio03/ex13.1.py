@@ -5,22 +5,16 @@ Salário: maior que zero;
 Sexo: 'f' ou 'm';
 Estado Civil: 's', 'c', 'v', 'd'; '''
 
-nome = input(("Insira o nome (maior que três caracteres): "))
-while len(nome) <= 3:
-    nome = input("Insira o nome (maior que três caracteres): ")
+valid = True
 
-idade = int(input("Insira a idade (0 - 150): "))
-while idade < 0 or idade > 150:
-    idade = int(input("Insira a idade (0 - 150): "))
+while valid:
+    nome = input("Digite o nome")
+    idade = int(input("Digite a idade"))
+    salario = float(input("Digite o salario"))
+    sexo = input("Digite o sexo")
+    estado_civil = input("Digite o estado civil")
 
-salario = int(input("Insira o salário (maior que zero): "))
-while salario <= 0:
-    salario = int(input("Insira o salário (maior que zero): "))
-
-sexo = input("Insira o sexo (f/m): ")
-while not (sexo in ['f', 'm']):
-    sexo = input("Insira o sexo (f/m): ")
-
-estadocivil = input("Insira o estado civil (s/c/v/d): ")
-while not (estadocivil in ['s', 'c', 'v', 'd']):
-    estadocivil = input("Insira o estado civil (s/c/v/d): ")
+    if len(nome) > 3 and idade >= 0 and idade <= 150 and salario > 0.0 and sexo == "fm" and estado_civil == "scvd":
+        print("passsou ")
+    else:
+        valid = not valid

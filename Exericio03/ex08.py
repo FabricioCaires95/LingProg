@@ -11,17 +11,21 @@ lados for maior que o terceiro;
 - Triângulo Escaleno: três lados diferentes;
 '''
 
-l1 = float(input('Insira o primeiro lado: '))
-l2 = float(input('Insira o segundo lado: '))
-l3 = float(input('Insira o terceiro lado: '))
+print("Insira o primeiro lado")
+l1 = float(input())
 
-if l1 < l2 + l3 and l2 < l1 + l3 and l3 < l1 + l2:
-    print('Os valores podem ser um triângulo.')
-    if l1 == l2 == l3:
-        print('Os valoresa formam um triângulo equilátero.')
+print("Insira o segundo lado:")
+l2 = float(input())
+
+print("Insira o terceiro lado:")
+l3 = float(input())
+
+if l1 + l2 > l3 and l1 + l3 > l2 and l2 + l3 > l1:
+    if l1 == l2 and l1 == l3:
+        print("Equilátero")
     elif l1 == l2 or l1 == l3 or l2 == l3:
-        print('Os valores formam um triângulo isósceles.')
+        print("Isósceles")
     else:
-        print('Os valores formam um triângulo escaleno.')
+        print("Escaleno")
 else:
-    print('Os valores não podem ser um triângulo.')
+    print("Nao podem formar um triangulo")

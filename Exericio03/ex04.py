@@ -17,6 +17,10 @@ v3 = int(input())
 
 list.insert(2, v3)
 
-list.reverse()
 
 print(list)
+
+'''
+Solucao do professor
+list = [int(x) for x in input(digite os numeros separados por espaco),split()]
+'''

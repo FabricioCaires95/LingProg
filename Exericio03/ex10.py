@@ -9,28 +9,29 @@ quantidade de notas existentes na máquina.
 duas notas de 100, uma nota de 50, uma nota de 5 e uma nota de
 1;
 - Exemplo 2: Para sacar a quantia de 399 reais, o programa fornece
-três notas de 100, uma nota de 50, quatro notas de 10, uma nota de
-5 e quatro notas de 1.
+três notas de 100, uma nota de 50, quatro notas de .
 '''
 print("Informe o valor do saque")
-saque = float(input())
+saque = int(input())
+
 
 if saque >= 10 and saque <= 600:
-    nota100 = saque // 100
-    resto = saque % 100
-    print(f'{nota100} notas de 100')
-    n50 = resto // 50
-    resto = resto % 50
-    print(f'{n50} notas de 50')
-    n10 = resto // 10
-    resto = resto % 10
-    print(f'{n10} notas de 10')
-    n5 = resto // 50
-    resto = resto % 5
-    print(f'{n5} notas de 5')
-    print(f'{resto} notas de 1')
+    n100 = saque // 100
+    r100 = saque % 100
+    n50 = r100 // 50
+    r50 = r100 % 50
+    n10 = r50 // 10
+    r10 = r50 % 10
+    n5 = r10 // 5
+    r5 = r10 % 5
+    n1 = r5 // 1
+
+    print(f'Notas de 10: {n100}')
+    print(f'Notas de 50: {n50}')
+    print(f'Notas de 5: {n5}')
+    print(f'Notas de 1: {n1}')
 else:
-    print("valor nao permitido")
+    print("Valor inválido")
 
 
 

@@ -11,7 +11,7 @@ Kg) de morangos e a quantidade (em Kg) de maças adquiridas e
 escreva o valor a ser pago pelo cliente.
 '''
 
-preco = 0
+preco = 0.0
 
 print("Quantidade de morango em kg")
 morang = float(input())
@@ -19,15 +19,21 @@ morang = float(input())
 print("Quantidade de macas em kg ")
 maca = float(input())
 
-if morang < 5:
-    preco += morang * 2.50
+if maca <= 5:
+    total_maca = maca * 1.8
 else:
-    preco += morang * 2.20
+    total_maca = maca * 1.5
 
-if maca < 5:
-    preco += maca * 1.80
+if morang <= 5:
+    total_morango = morang * 2.5
 else:
-    preco += maca * 1.50
+    total_morango = morang * 2.2
 
-if preco > 25.00:
-    preco *= 0.90
+total_kilos = maca + morang
+preco = total_maca + total_maca
+
+if total_kilos > 8 or preco > 25 :
+    preco = preco * 0.9
+
+print(f'Voce comprou {total_kilos}Kg de maça e morango')
+print(f'Pagara o valor de {preco}$')
