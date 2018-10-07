@@ -5,14 +5,17 @@ devolve o produto dos seus elementos
 
 
 def prodnlista(list):
-    sizeList = len(list) - 1
-    return list[sizeList] if sizeList == 1 else sizeList * prodnlista(list)
+
+    if len(list) == 1:
+        return len(list)
+    else:
+        return list[len(list) - 1] * prodnlista(prodnlista(list[len(list) - 2]))
 
 
 
 
 
 
+print(prodnlista([2,3,4]))
 
 
-print(prodnlista([1,1]))

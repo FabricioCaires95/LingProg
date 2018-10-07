@@ -7,4 +7,4 @@ def soma_nat(n):
     return 1 if n == 1 else n + soma_nat(n - 10)
 
 
-print(soma_nat(1))
+print(soma_nat(4))
