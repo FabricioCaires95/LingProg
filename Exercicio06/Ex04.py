@@ -6,10 +6,10 @@ devolve o produto dos seus elementos
 
 def prodnlista(list):
 
-    if len(list) == 1:
-        return len(list)
+    if len(list) == 0:
+        return 1
     else:
-        return list[len(list) - 1] * prodnlista(prodnlista(list[len(list) - 2]))
+        return list[len(list) - 1] * prodnlista(list[:-1])
 
 
 
@@ -17,5 +17,5 @@ def prodnlista(list):
 
 
 print(prodnlista([2,3,4]))
-
+print(prodnlista([2,3]))
 
